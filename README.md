@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# Poetry 📝
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## A Poetry platform with <img src="https://img.shields.io/badge/react-61DAFB?logo=react&logoColor=white&logoWidth=30"/> - <img src="https://img.shields.io/badge/-css3-1572B6?logo=css3&logoColor=white&logoWidth=30"/>
 
-## Available Scripts
+### Developed by Salim Ege Caliskan
+### Implementing the Poetry DB, created by <a href="https://github.com/thundercomb/poetrydb"> thundercomb </a>
 
-In the project directory, you can run:
+<strong>Initial idea</strong>💡 <br/>
+I wanted to get more projects done using React and practice using APIs, making HTTP requests and building a web page on that premise. I started looking for some open source databases and some spiked my interests (maybe I will also do some other projects with those), but as a great lover of poetry, I had to first create a project using this Poetry database.
 
-### `npm start`
+## Takeaways 📝
+I practiced:
+  <ul>
+    <li>API requests✔️</li>
+    <li>React components (form/input &.)✔️</li>
+  </ul>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## TODOs
+  <ul>
+    <li>Make navigation better (back to the top?)</li>
+    <li>Add another search functionality for individual poems</li>
+    <li>Display poems in a more presentable way? (for the author search)</li>
+  </ul>
