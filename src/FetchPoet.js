@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Poem from "./Poem";
+import Poems from "./Poems";
 
 const FetchPoet = () => {
     const [poems, setPoems] = useState(null)
@@ -7,12 +7,9 @@ const FetchPoet = () => {
     const [isError, setIsError] = useState(false)
     const [authorName, setAuthorName] = useState(null)
 
-
-
     const handleSubmit = (e) => {
 
         e.preventDefault();
-        setIsError(false)
 
         const form = e.target;
         const formData = new FormData(form)
@@ -66,15 +63,13 @@ const FetchPoet = () => {
             </div >
             <br />
             <hr />
-            <div className="poems">
 
-                {(isError && authorName !== null) && <h2 h2 className="error-info">No results for {authorName} </h2>}
+            {(isError && authorName !== null) && <h2 className="error-info">No results for {authorName} </h2>}
 
-                {isFetching && <p className="poem"> Fetching your poem(s) </p>}
+            {isFetching && <p className="poem"> Fetching your poem(s) </p>}
 
-                {(poems && !isError && !isFetching) && < Poem poems={poems} />}
+            {(poems && !isError && !isFetching) && < Poems poems={poems} />}
 
-            </div >
         </>
     );
 }
