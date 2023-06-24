@@ -12,12 +12,12 @@ I wanted to get more projects done using React and practice using APIs, making H
 I practiced:
   <ul>
     <li>API requests✔️</li>
-    <li>React components (form/input &.)✔️</li>
+    <li>React components (form/input &) and useState hook ✔️</li>
   </ul>
 
 ## TODOs
   <ul>
     <li>Make navigation better (back to the top?)</li>
     <li>Add another search functionality for individual poems</li>
-    <li>Display poems in a more presentable way? (for the author search)</li>
+    <del><li>Display poems in a more presentable way? (for the author search)~~</li></del> Done.
   </ul>
