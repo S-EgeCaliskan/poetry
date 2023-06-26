@@ -6,23 +6,7 @@
 }
 
 /*Navbar*/
-.navbar-container{
-  height: 80px;
-  background-color: rgba(255, 255, 255, 0.808);
-  display: flex;
-  position: sticky;
-  top: 0px;
-  align-items: center;
-  justify-content: center;
 
-}
-.logo{
-  border-bottom: 1px solid;
-}
-  h2, h3, p{
-  text-align: center;
-  font-size: 20px;
-}
 
  /* small screens */
 @media screen and (max-width: 600px){
@@ -30,13 +14,28 @@
   background: linear-gradient(100deg, #dcf1ffcb, #1abeffb7);
   background-attachment: fixed;
   }
-
+  .navbar-container{
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.808);
+    display: flex;
+    position: sticky;
+    top: 0px;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo{
+    border-bottom: 1px solid;
+  }
+    h2, h3, p{
+    text-align: center;
+    font-size: 20px;
+  }
   .search-container{
     display: grid;
     place-items: center;
     margin: 0 auto;
   }
-  .author-search{
+  .author-search, .poem-search{
     border: 1px solid rgba(80, 210, 250, 0.623);
     background-color: rgba(80, 210, 250, 0.322) ;
     min-width: 250px;
@@ -45,8 +44,20 @@
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    max-width: 500px;
   }
-  .author-search form{
+  .search-selector{
+    width: 200px;
+    height: 50px;
+    background-color: rgba(189, 255, 255, 0.466);
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  form{
     max-width: 200px;
     display: flex;
     text-align: center;
@@ -61,7 +72,7 @@
   }
   .poem-container{
     border: 2px solid rgba(35, 214, 184, 0.582);
-    background-color: rgba(35, 214, 184, 0.171);
+    background-color: rgba(189, 255, 255, 0.466);
     margin: 10px 10px;
   }
   .error-info{
@@ -73,17 +84,27 @@
 
 /* big screens */
 @media screen and (min-width: 601px){
-
   body{
    background: linear-gradient(100deg, #dcf1ffcb, #1abeffb7);
    background-attachment: fixed;
-   display: flex;
    justify-content: center;
    align-items: center;
+   max-width: 1000px;
    text-align: center;
    }
    .navbar-container{
-    width: 700px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.808);
+    display: flex;
+    position: sticky;
+    min-width: 600px;
+    top: 0px;
+    align-items: center;
+    justify-content: center;
+  }
+    h2, h3, p{
+    text-align: center;
+    font-size: 20px;
   }
    .search-container{
     place-items: center;
@@ -91,15 +112,32 @@
     justify-content: center;
     margin: 50px auto;
   }
-  
-   .author-search{
+
+   .author-search, .poem-search{
     border: 1px solid rgba(80, 210, 250, 0.623);
     background-color: rgba(80, 210, 250, 0.322) ;
     display: flex;
     min-height: 100px;
     justify-content: center;
     align-items: center;
+    max-width: 500px;
+
   }  
+
+  .search-selector{
+    width: 200px;
+    height: 50px;
+    background-color: rgba(189, 255, 255, 0.466);
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    align-items: center;
+    margin: 20px auto;
+  }
+  .search-selector:hover{
+    cursor:pointer;
+    background-color: rgb(189, 255, 255);
+  }
   form{
     max-width: 200px;
     display: flex;
@@ -120,8 +158,13 @@
   }
   .poem-container{
     border: 2px solid rgba(35, 214, 184, 0.582);
-    background-color: rgba(35, 214, 184, 0.171);
+    background-color: rgba(189, 255, 255, 0.466);
+    width: auto;
     margin: 20px 10px;
+  }
+  .poem-container:hover{
+    cursor: pointer;
+    background-color: rgb(189, 255, 255);
   }
   .error-info{
     margin-top: 50px;

@@ -1,11 +1,10 @@
-import Navbar from './Navbar';
-import FetchPoet from './FetchPoet';
-
+import Navbar from './Components/Navbar';
+import Home from './Components/Home';
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <FetchPoet />
+      <Home />
     </div>
   );
 }

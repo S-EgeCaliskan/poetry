@@ -5,6 +5,15 @@
 ### Developed by Salim Ege Caliskan
 ### Implementing the Poetry DB, created by <a href="https://github.com/thundercomb/poetrydb"> thundercomb </a>
 
+<strong>Navigate through the code</strong>
+<ul>
+  <li>
+    Custom hooks include the API calls made through search forms. FetchPoem is based on the titles of the poems, whereas the FetchPoet makes calls in relation to the author's name
+  </li>
+  <li>
+    Components include the navigation bar, the home page, and poems/poem pages. I opted to keep poems and poem components separate to be able to make changes easier if need be.
+  </li>
+</ul>
 <strong>Initial idea</strong>💡 <br/>
 I wanted to get more projects done using React and practice using APIs, making HTTP requests and building a web page on that premise. I started looking for some open source databases and some spiked my interests (maybe I will also do some other projects with those), but as a great lover of poetry, I had to first create a project using this Poetry database.
 
@@ -18,6 +27,6 @@ I practiced:
 ## TODOs
   <ul>
     <li>Make navigation better (back to the top?)</li>
-    <li>Add another search functionality for individual poems</li>
-    <del><li>Display poems in a more presentable way? (for the author search)~~</li></del> Done.
+    <del><li>Add another search functionality for individual poems</li></del> Done.
+    <del><li>Display poems in a more presentable way? (for the author search)</li></del> Done.
   </ul>

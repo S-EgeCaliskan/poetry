@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import Poems from "./Poems";
+import Poems from "../Components/Poems";
+
 
 const FetchPoet = () => {
     const [poems, setPoems] = useState(null)
@@ -50,21 +51,21 @@ const FetchPoet = () => {
 
     return (
         <>
-            <div className="search-container">
-                <div className="author-search">
-                    <form action="post" onSubmit={handleSubmit}>
-                        <label>
-                            Poet name:
-                            <input type="text" name="authorName" required={true} placeholder="Shakespeare" />
-                            <button type='submit'> Search Poems </button>
-                        </label>
-                    </form>
-                </div>
-            </div >
-            <br />
-            <hr />
+            <div className="author-search">
+                <form action="post" onSubmit={handleSubmit}>
+                    <label>
+                        Which author would you like to search the poems of?
+                        <br />
+                        <br />
+                        Poet name:
+                        <input type="text" name="authorName" required={true} placeholder="Shakespeare" />
+                        <button type='submit'> Search for author(s) </button>
+                    </label>
+                </form>
+            </div>
 
-            {(isError && authorName !== null) && <h2 className="error-info">No results for {authorName} </h2>}
+            {(isError && authorName !== null) && <h2 className="error-info">No results for {authorName} </h2>
+            }
 
             {isFetching && <p className="poem"> Fetching your poem(s) </p>}
 
