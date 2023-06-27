@@ -1,44 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
+/* GENERAL */
 *{
   font-family: 'Roboto Condensed', sans-serif;
   margin: 0 auto;
+  padding: 0 auto;
 }
 
-/*Navbar*/
-
+.nav{
+  background-color: #ffe2abda;
+  border: 1px solid rgba(255, 255, 255, 0.514);
+  display: flex;
+  height: 80px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
 
  /* small screens */
 @media screen and (max-width: 600px){
   body{
-  background: linear-gradient(100deg, #dcf1ffcb, #1abeffb7);
+  background: linear-gradient(300deg, #2581faad, #FAB126);
   background-attachment: fixed;
   }
-  .navbar-container{
-    height: 80px;
-    background-color: rgba(255, 255, 255, 0.808);
+  .nav{
+    height: auto;
+  }
+  .nav h2{
+    width: 50%  ;
+  }
+  #navbar-toggle{
+    opacity: 50%;
+  }
+  #navbar-toggle:hover{
+    opacity: 100%;
+    cursor: pointer;
+  }
+  #menu{
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;
+  }
+  .menu-list{
     display: flex;
-    position: sticky;
-    top: 0px;
-    align-items: center;
     justify-content: center;
-  }
-  .logo{
-    border-bottom: 1px solid;
-  }
-    h2, h3, p{
-    text-align: center;
-    font-size: 20px;
-  }
-  .search-container{
-    display: grid;
-    place-items: center;
+    padding: 0;
+    flex-direction: column;
     margin: 0 auto;
   }
+
+  #menu-toggled{
+    width: 50%;
+  }
+
+  .menu-list li{
+    list-style: none;
+    padding: 10px;
+  }
+
+  .menu-list li:hover{
+    color: #2581faad;
+    cursor: pointer;
+    border-bottom: 1px solid #2581faad;
+  }
+    h2, h3{
+    font-size: 20px;
+  }
+  .search-field{
+    display: grid;
+  }
+
   .author-search, .poem-search{
-    border: 1px solid rgba(80, 210, 250, 0.623);
-    background-color: rgba(80, 210, 250, 0.322) ;
-    min-width: 250px;
+    border: 1px solid rgba(255, 255, 255, 0.514);
+    background-color: #ffe2abda;
+    width: auto;
     display: flex;
     min-height: 100px;
     justify-content: center;
@@ -49,7 +85,7 @@
   .search-selector{
     width: 200px;
     height: 50px;
-    background-color: rgba(189, 255, 255, 0.466);
+    background-color: #FFC559;
     display: flex;
     justify-content: center;
     text-decoration: underline;
@@ -60,7 +96,6 @@
   form{
     max-width: 200px;
     display: flex;
-    text-align: center;
   }
   button, label, input{
     margin: 15px;
@@ -68,12 +103,25 @@
   }
   p{
     font-size: 17px;
+    margin-left: 5px;
+  }
+  .poem{
+    background-color: #daeaffad;
+    margin: 10px 10px;
+  }  
+  .poem p::selection{
+    background-color: #ffc559;
+  }
+  .fetching-poem{
     text-align: center;
+    background-color: #daeaffad;
+    margin: 10px 10px;
   }
   .poem-container{
-    border: 2px solid rgba(35, 214, 184, 0.582);
-    background-color: rgba(189, 255, 255, 0.466);
+    border: 2px solid rgba(255, 255, 255, 0.514);
+    background-color: #ffc55993;
     margin: 10px 10px;
+    text-align: center;
   }
   .error-info{
     margin-top: 50px;
@@ -82,28 +130,31 @@
   }
 }
 
+
 /* big screens */
 @media screen and (min-width: 601px){
-  body{
-   background: linear-gradient(100deg, #dcf1ffcb, #1abeffb7);
-   background-attachment: fixed;
-   justify-content: center;
-   align-items: center;
-   max-width: 1000px;
-   text-align: center;
-   }
-   .navbar-container{
-    height: 80px;
-    background-color: rgba(255, 255, 255, 0.808);
-    display: flex;
-    position: sticky;
-    min-width: 600px;
-    top: 0px;
-    align-items: center;
-    justify-content: center;
+  #menu-close, #navbar-toggle{
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
   }
-    h2, h3, p{
-    text-align: center;
+  body{
+   background: linear-gradient(300deg, #2581faad, #FAB126);
+   background-attachment: fixed;
+   }
+
+  .menu-list{
+    display: flex;
+    height: 20px;
+    gap: 100px;
+    list-style: none;
+  }
+  .menu-list li:hover{
+    color: #2581faad;
+    border-bottom: 1px solid #2581faad;
+    cursor: pointer;
+  }
+    h2, h3{
     font-size: 20px;
   }
    .search-container{
@@ -114,20 +165,19 @@
   }
 
    .author-search, .poem-search{
-    border: 1px solid rgba(80, 210, 250, 0.623);
-    background-color: rgba(80, 210, 250, 0.322) ;
+    border: 1px solid rgba(255, 255, 255, 0.514);
+    background-color: #ffe2abda;
     display: flex;
     min-height: 100px;
     justify-content: center;
     align-items: center;
     max-width: 500px;
-
   }  
 
   .search-selector{
     width: 200px;
     height: 50px;
-    background-color: rgba(189, 255, 255, 0.466);
+    background-color: #FFC559;
     display: flex;
     justify-content: center;
     text-decoration: underline;
@@ -136,7 +186,7 @@
   }
   .search-selector:hover{
     cursor:pointer;
-    background-color: rgb(189, 255, 255);
+    background-color: #FAB126;
   }
   form{
     max-width: 200px;
@@ -149,26 +199,40 @@
   }
 
   .poem{
-    margin: 10px 20px 0 20px; 
     text-align: justify;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 18px;
+    margin: 0 auto;
+    background-color: #daeaff57;
+    max-width: 1000px;
+  }
+  .poem p::selection{
+    background-color: #ffc559;
+  }
+    .fetching-poem{
+    text-align: center;
+    background-color: #daeaffad;
+    margin: 15px auto;
+    max-width: 1000px;
   }
   .poem-container{
-    border: 2px solid rgba(35, 214, 184, 0.582);
-    background-color: rgba(189, 255, 255, 0.466);
+    border: 2px solid rgba(255, 255, 255, 0.514);
+    background-color: #ffc55993;
+    max-width: 1000px;
     width: auto;
-    margin: 20px 10px;
+    text-align: center;
+    margin: 15px auto;
   }
   .poem-container:hover{
     cursor: pointer;
-    background-color: rgb(189, 255, 255);
+    background-color: #FAB126;
   }
   .error-info{
     margin-top: 50px;
     text-align: center;
     color: brown;
   }
+
 }

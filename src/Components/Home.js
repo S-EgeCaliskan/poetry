@@ -11,8 +11,8 @@ const Home = () => {
     return (
         <>
             <div className="search-selector" onClick={handleToggle}>
-                {toggle && <>Search for Poems</>}
-                {!toggle && <>Search for Poets</>}
+                {toggle && <>Search for Poems instead</>}
+                {!toggle && <>Search for Poets instead</>}
             </div>
             <div className="search-field">
                 {toggle && <FetchPoet />}

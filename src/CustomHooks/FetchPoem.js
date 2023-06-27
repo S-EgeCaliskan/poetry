@@ -41,7 +41,6 @@ const FetchPoem = () => {
                 }
                 setIsFetching(false)
             }).catch((err) => {
-                console.log(err);
                 setIsFetching(false)
                 setIsError(true)
             })
@@ -65,7 +64,7 @@ const FetchPoem = () => {
 
             {(isError && poemName !== null) && <h2 className="error-info">No results for {poemName} </h2>}
 
-            {isFetching && <p className="poem"> Fetching your poem </p>}
+            {isFetching && <p className="fetching-poem"> Fetching your poem </p>}
 
             {(poem && !isError && !isFetching) && < Poems poems={poem} />}
         </>
