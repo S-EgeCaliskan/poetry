@@ -26,7 +26,7 @@ I practiced:
 
 ## TODOs
   <ul>
-    <li>Add "About" and "Favourites"</li>
+    <li>Add  <del>"About"</del> and "Favourites"</li>
     <li>Make navigation better (back to the top?)</li>
     <del><li>Add another search functionality for individual poems</li></del> Done.
     <del><li>Display poems in a more presentable way? (for the author search)</li></del> Done.

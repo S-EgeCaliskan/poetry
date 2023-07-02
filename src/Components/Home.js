@@ -1,23 +1,14 @@
-import FetchPoet from "../CustomHooks/FetchPoet";
-import FetchPoem from "../CustomHooks/FetchPoem";
-import { useState } from "react";
+import Search from "./Search";
+import About from "./About";
+import Favourites from "./Favourites";
 
-const Home = () => {
-    const [toggle, setToggle] = useState(true)
+const Home = ({ about, home, favourites }) => {
 
-    const handleToggle = () => {
-        setToggle(!toggle)
-    }
     return (
         <>
-            <div className="search-selector" onClick={handleToggle}>
-                {toggle && <>Search for Poems instead</>}
-                {!toggle && <>Search for Poets instead</>}
-            </div>
-            <div className="search-field">
-                {toggle && <FetchPoet />}
-                {!toggle && <FetchPoem />}
-            </div>
+            {home && <Search />}
+            {about && <About />}
+            {favourites && <Favourites />}
         </>
     );
 }

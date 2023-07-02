@@ -6,7 +6,12 @@
   margin: 0 auto;
   padding: 0 auto;
 }
-
+#active{
+  color: #2581faad;
+}
+#logo:hover{
+  cursor: pointer;
+}
 .nav{
   background-color: #ffe2abda;
   border: 1px solid rgba(255, 255, 255, 0.514);
@@ -16,6 +21,38 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px;
+}
+
+.about-container{
+  display: flex;
+}
+
+.about {
+  margin: 80px;
+  text-align: justify;
+  font-size: 18px;
+  flex: 50%;
+
+}
+.dbimg{
+  margin: 100px;
+  display: flex;
+  flex: 50%;
+  flex-direction: column;
+}
+#dbimg{
+  width: 100%;
+  height: 100%;
+}
+
+
+.search-selector:hover{
+  cursor:pointer;
+  background-color: #FAB126;
+}
+.poem-container:hover{
+  cursor: pointer;
+  background-color: #FAB126;
 }
 
  /* small screens */
@@ -67,6 +104,8 @@
     h2, h3{
     font-size: 20px;
   }
+
+  
   .search-field{
     display: grid;
   }
@@ -128,6 +167,7 @@
     text-align: center;
     color: brown;
   }
+
 }
 
 
@@ -184,10 +224,7 @@
     align-items: center;
     margin: 20px auto;
   }
-  .search-selector:hover{
-    cursor:pointer;
-    background-color: #FAB126;
-  }
+
   form{
     max-width: 200px;
     display: flex;
@@ -211,11 +248,11 @@
   .poem p::selection{
     background-color: #ffc559;
   }
-    .fetching-poem{
-    text-align: center;
-    background-color: #daeaffad;
-    margin: 15px auto;
-    max-width: 1000px;
+  .fetching-poem{
+  text-align: center;
+  background-color: #daeaffad;
+  margin: 15px auto;
+  max-width: 1000px;
   }
   .poem-container{
     border: 2px solid rgba(255, 255, 255, 0.514);
@@ -225,14 +262,25 @@
     text-align: center;
     margin: 15px auto;
   }
-  .poem-container:hover{
-    cursor: pointer;
-    background-color: #FAB126;
-  }
+
   .error-info{
     margin-top: 50px;
     text-align: center;
     color: brown;
   }
+}
+
+@media screen and (max-width: 1000px){
+
+  .about-container{
+    flex-flow: column wrap;
+  }
+
+  .about {
+  margin: 50px 20px 0px 20px;
+  }
+  .dbimg{
+    margin: 50px 20px 0px 20px;
+  } 
 
 }

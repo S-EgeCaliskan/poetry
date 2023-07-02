@@ -1,4 +1,4 @@
-const Poem = ({ poem, title }) => {
+const Poem = ({ poem }) => {
     return (
         <div className="poem">
             {
