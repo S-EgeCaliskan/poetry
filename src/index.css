@@ -45,14 +45,26 @@
   height: 100%;
 }
 
-
-.search-selector:hover{
+.search-selector:hover, button:hover{
   cursor:pointer;
-  background-color: #FAB126;
+  color: white;
+  background-color: #2581faad;
+
 }
 .poem-container:hover{
   cursor: pointer;
   background-color: #FAB126;
+}
+
+input{
+  height: 20px;
+}
+button{
+  cursor: pointer;
+  background-color: #FAB126;
+  border: 1px solid white;
+  border-radius: 5px;
+  height: 35px;
 }
 
  /* small screens */
@@ -234,6 +246,10 @@
     margin: 15px;
     text-align: center;
   }
+  button{
+    cursor: pointer;
+  }
+
 
   .poem{
     text-align: justify;
